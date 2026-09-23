@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laços que Acolhem — Jogo da Memória | Setembro Amarelo</title>
+  <meta name="description" content="Jogo da memória educativo sobre Setembro Amarelo: cuidado, empatia e esperança." />
+  <link rel="stylesheet" href="css/jogo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1 id="barra" class="letras">Laços que Acolhem</h1>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="jogo.html">Jogo</a>
+    </nav>
+</header>
+
+  <!-- TELA INICIAL -->
+  <section id="screen-start" class="screen active" aria-label="Tela inicial">
+    <div class="start-card">
+      <div class="sunflower" aria-hidden="true">🌻</div>
+      <h1>Laços que Acolhem</h1>
+      <p class="subtitle">Um jogo da memória sobre cuidado, empatia e esperança.</p>
+      <p class="intro">
+        Encontre os pares que conectam <strong>perguntas e respostas</strong>,
+        <strong>mitos e verdades</strong> e mensagens de apoio.
+        Sem pressa. Respire fundo. Você está em um espaço seguro. 💛
+      </p>
+      <div class="start-actions">
+        <button id="btn-start" class="btn primary">Começar a jogar</button>
+        <button id="btn-sound" class="btn ghost" aria-pressed="false">🔈 Som: ativado</button>
+      </div>
+      <p class="disclaimer">
+        Se em algum momento você precisar conversar:
+        <strong>CVV — 188</strong> (24h, gratuito e sigiloso) ou <strong>cvv.org.br</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- TELA DO JOGO -->
+  <section id="screen-game" class="screen" aria-label="Tabuleiro do jogo">
+    <header class="game-header">
+      <h2 class="game-title">Laços que Acolhem</h2>
+      <div class="game-status">
+        <span id="pairs-counter">Pares: 0 / 8</span>
+        <button id="btn-restart" class="btn small ghost">Reiniciar</button>
+        <button id="btn-mute-game" class="btn small ghost" aria-pressed="false">🔈</button>
+      </div>
+    </header>
+
+    <div id="board" class="board" role="grid" aria-label="Cartas do jogo da memória"></div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </section>
+
+  <!-- TELA FINAL -->
+  <section id="screen-end" class="screen" aria-label="Mensagem final">
+    <div class="end-card">
+      <div class="sunflower big" aria-hidden="true">🌻</div>
+      <h2>Você concluiu o Laços que Acolhem.</h2>
+      <p class="end-line">
+        Cada par que você encontrou é um lembrete:
+        <strong>falar sobre sentimentos é um ato de cuidado.</strong>
+        <strong>Ouvir com empatia pode salvar vidas.</strong>
+      </p>
+
+      <div class="help-box">
+        <h3>Se você ou alguém que ama precisar conversar:</h3>
+        <ul>
+          <li>📞 <strong>CVV — 188</strong> (ligação gratuita, 24h, sigilosa)</li>
+          <li>💬 <strong>Chat:</strong> cvv.org.br</li>
+          <li>📧 <strong>E-mail:</strong> atendimento@cvv.org.br</li>
+          <li>🚑 Emergências: <strong>SAMU 192</strong> ou <strong>Bombeiros 193</strong></li>
+        </ul>
+      </div>
+
+      <p class="end-quote">
+        Cuide de você com a mesma gentileza que cuidaria de um amigo.<br />
+        <strong>Você importa. Sua história importa. E você não está só.</strong>
+      </p>
+
+      <p class="end-tag">💛 Setembro Amarelo — todos os meses do ano.</p>
+
+      <div class="end-actions">
+        <button id="btn-play-again" class="btn primary">🔁 Jogar novamente</button>
+        <button id="btn-more" class="btn ghost">📖 Saber mais</button>
+        <button id="btn-share" class="btn ghost">📤 Compartilhar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL "SABER MAIS" -->
+  <div id="modal-more" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <h3 id="modal-title">Fatores de proteção</h3>
+      <p>Coisas simples que fortalecem a saúde emocional no dia a dia:</p>
+      <ul>
+        <li>🌱 Vínculos afetivos e conversas sinceras.</li>
+        <li>🌞 Rotina gentil: sono, alimentação e pausas.</li>
+        <li>🎨 Atividades que dão sentido e prazer.</li>
+        <li>🤝 Apoio profissional quando necessário (CAPS, UBS, psicólogos).</li>
+        <li>💛 Saber que pedir ajuda é força, não fraqueza.</li>
+      </ul>
+      <p class="modal-note">
+        Se você quiser entender melhor, o CVV (188) oferece escuta sem julgamento.
+      </p>
+      <button id="btn-close-more" class="btn primary">Fechar</button>
+    </div>
+  </div>
+
+  <script src="cards.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
